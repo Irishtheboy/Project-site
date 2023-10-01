@@ -1,0 +1,185 @@
+
+body, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #020202;
+    color: white;
+    padding: 10px;
+}
+
+
+.left-images img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+
+.logo img {
+    max-width: 100px;
+}
+
+
+.menu-button {
+    background-color: #000000;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+#show-menu-button {
+    display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    .left-images {
+        display: none;
+    }
+    #show-menu-button {
+        display: block;
+    }
+
+    
+    .dropdown-content {
+        right: calc(100% - 160px); 
+    }
+
+    #show-menu-button:checked + .right-menu .dropdown-container {
+        display: block; 
+    }
+}
+
+
+a {
+    color: white; 
+}
+
+
+a:visited {
+    color: gold; 
+}
+
+
+a:hover {
+    color: blue; 
+}
+
+
+a:active {
+    color: green; 
+}
+
+.image-text {
+    text-align: center;
+    font-size: 16px;
+    font-family: sans-serif;
+    color: #333;
+  }
+  .image-text {
+    text-align: center;
+  }
+
+
+
+
+
+  .MainImage {
+    position: relative;
+}
+
+.MainImage img {
+    width: 100%;
+    height: 100%;
+}
+
+.Hh1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.781);
+    padding: 10px;
+    color: #fff;
+    font-size: 24px; 
+}
+
+
+.product-section {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 20px;
+    max-width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+}
+
+
+.product img {
+    max-width: 100%;
+    height: 200px; 
+}
+
+.footer {
+    background-color: #000000;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
