@@ -1,0 +1,281 @@
+.wallet1 {
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+		}
+.wallet2 {
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+		}
+.wallet3 {
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+		}
+.wallet4 {
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+		}	
+.bag1 {
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+		}	
+ .bag2 {
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+		}	
+.bag3 {
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+		}	
+.bag4 {
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+		}			
+
+.jacket1 {
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+		}			
+.jacket2 {
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+		}	
+.jacket3 {
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+		}	
+.jacket4 {
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+		}	
+
+.wjacket1 {
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+		}	
+.wjacket2 {
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+		}	
+
+.wjacket3 {
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+		}	
+
+.wjacket4 {
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+		}	
+
+.laptop1 {
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+		}	
+
+.laptop2 {
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+		}	
+
+.laptop3 {
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+		}	
+
+.laptop4 {
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+		}	
+.phone1 {
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+		}	
+.phone2 {
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+		}	
+
+.ear1 {
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+		}	
+
+.ear2 {
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+		}	
+
+
+		
+        .product-section {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 20px;
+    max-width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+}
+
+
+.product img {
+    max-width: 100%;
+    height: 200px; 
+}

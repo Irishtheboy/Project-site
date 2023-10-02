@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Shopping Cart</title>
+    <link rel="stylesheet" href="CSS/index.css">
+    <style>
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #020202;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          padding: 12px 16px;
+          z-index: 1;
+          right: 0;
+        }
+        
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+
+        
+        .dropdown:hover img {
+          content: url('images/Elements/burgermenuT.png' );
+          width: 40px;
+          position: relative;
+        }
+        /* Your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+
+        .product {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            max-width: 250px;
+            width: 100%;
+        }
+
+        .cart {
+            width: 300px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            max-width: 300px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Popup styles */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 999;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        .popup-content {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            position: relative; /* Center content */
+        }
+
+        .btnCart{
+            border: 1px solid #3498db;
+            background: none;
+            padding: 10px 20px;
+            font-family: "montserrat";
+            cursor: pointer;
+            margin: 10px;
+            transition: 0.8s;
+            position: relative;
+            overflow: hidden;
+
+        }
+
+        .btnCart:hover{
+           color: #fff; 
+        }
+        .btnCart::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 0%;
+            background: #3498db;
+            z-index: -1;
+            transition: 0.8s;
+
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="left-images">
+            <img src="images/Elements/logo1.png" alt="Logo 1">
+            <img src="images/Elements/logo2.png" alt="Logo 2">
+            <img src="images/Elements/logo3.png" alt="Logo 3">
+        </div>
+        <div class="logo">
+            <img src="images/Elements/MainLogo.png" alt="Main Image" width="100px">
+        </div>
+        <div class="dropdown">
+            <span><img src="images/Elements/burgermenu.png" alt="Logo 1" width="40px"></span>
+            <div class="dropdown-content">
+              <ul>
+                <li><a href="Home#">Home</a></li>
+                <li><a href="Home#">About the Leather</a></li>
+                <li><a href="Home#">DIY Methouds</a></li>
+                <li><a href="Home#">Brick & Morter</a></li>
+                <li><a href="Home#">Shop Now</a></li>
+              </ul>
+            </div>
+          </div>
+    </nav>
+
+    <div class="container">
+        <!-- Product list -->
+        <div class="product">
+            <h2>Black Leather Men's Wallet</h2>
+            <img src="Images/Wallet/Wallet1.jpg" alt="Black Mens Wallet">
+            <p>Price: R10.00</p>
+            <button class="btnCart" onclick="openPopup('Black Leather Men\'s Wallet', 10)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <h2>Brown Leather Men's Wallet</h2>
+            <img src="images/Wallet/Wallet2.jpg" alt="Brown Mens Wallet">
+            <p>Price: R15.00</p>
+            <button class="btnCart" onclick="openPopup('Brown Leather Men\'s Wallet', 15)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <h2>Brown Leather Men's Wallet</h2>
+            <img src="images/Wallet/Wallet2.jpg" alt="Brown Mens Wallet">
+            <p>Price: R15.00</p>
+            <button class="btnCart" onclick="openPopup('Brown Leather Men\'s Wallet', 15)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <h2>Brown Leather Men's Wallet</h2>
+            <img src="images/Wallet/Wallet2.jpg" alt="Brown Mens Wallet">
+            <p>Price: R15.00</p>
+            <button class="btnCart" onclick="openPopup('Brown Leather Men\'s Wallet', 15)">Add to Cart</button>
+        </div>
+        <!-- Shopping cart -->
+        <div class="cart">
+            <h2>Shopping Cart</h2>
+            <ul id="cartItems"></ul>
+            <p>Total: R<span id="cartTotal">0.00</span></p>
+        </div>
+    </div>
+
+    <!-- Popup for selecting quantity -->
+    <div class="popup" id="quantityPopup">
+        <div class="popup-content">
+            <h2>Select Quantity</h2>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" min="1" value="1">
+            <button onclick="addToCartWithQuantity()">Add to Cart</button>
+            <button onclick="closePopup()">Cancel</button>
+        </div>
+    </div>
+
+   
+    
+
+    <script>
+        // Shopping cart data
+        const cart = [];
+        let total = 0;
+
+        // Product details for the popup
+        let currentProductName = "";
+        let currentProductPrice = 0;
+
+        function openPopup(productName, productPrice) {
+            // Set the current product details
+            currentProductName = productName;
+            currentProductPrice = productPrice;
+
+            // Show the quantity selection popup
+            document.getElementById("quantityPopup").style.display = "flex";
+        }
+
+        function addToCartWithQuantity() {
+            const quantity = parseInt(document.getElementById("quantity").value);
+
+            if (quantity > 0) {
+                // Add the item(s) to the cart
+                const totalPrice = currentProductPrice * quantity;
+                cart.push({ name: currentProductName, price: totalPrice });
+
+                // Update the cart display
+                updateCartDisplay();
+
+                // Calculate the total
+                total += totalPrice;
+                updateTotalDisplay();
+
+                // Close the popup
+                closePopup();
+            }
+        }
+
+        function removeFromCart(index) {
+            // Remove the item from the cart
+            const removedItem = cart.splice(index, 1)[0];
+
+            
+            updateCartDisplay();
+
+            
+            total -= removedItem.price;
+            updateTotalDisplay();
+        }
+
+        function updateCartDisplay() {
+            const cartItemsList = document.getElementById("cartItems");
+            cartItemsList.innerHTML = "";
+
+            for (let i = 0; i < cart.length; i++) {
+                const listItem = document.createElement("li");
+                listItem.textContent = cart[i].name + " - R" + cart[i].price.toFixed(2);
+                const removeButton = document.createElement("button");
+                removeButton.textContent = "Remove";
+                removeButton.onclick = function () {
+                    removeFromCart(i);
+                };
+                listItem.appendChild(removeButton);
+                cartItemsList.appendChild(listItem);
+            }
+        }
+
+        function updateTotalDisplay() {
+            const cartTotal = document.getElementById("cartTotal");
+            cartTotal.textContent = total.toFixed(2);
+        }
+
+        function closePopup() {
+            
+            document.getElementById("quantityPopup").style.display = "none";
+        }
+    </script>
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2023 Inkweli Yenkosi</p>
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </footer>
+        </body>
+</body>
+</html>
