@@ -201,20 +201,20 @@
     
 
     <script>
-        // Shopping cart data
+        
         const cart = [];
         let total = 0;
 
-        // Product details for the popup
+       
         let currentProductName = "";
         let currentProductPrice = 0;
 
         function openPopup(productName, productPrice) {
-            // Set the current product details
+            
             currentProductName = productName;
             currentProductPrice = productPrice;
 
-            // Show the quantity selection popup
+           
             document.getElementById("quantityPopup").style.display = "flex";
         }
 
@@ -222,24 +222,23 @@
             const quantity = parseInt(document.getElementById("quantity").value);
 
             if (quantity > 0) {
-                // Add the item(s) to the cart
+                
                 const totalPrice = currentProductPrice * quantity;
                 cart.push({ name: currentProductName, price: totalPrice });
 
-                // Update the cart display
+                
                 updateCartDisplay();
 
-                // Calculate the total
                 total += totalPrice;
                 updateTotalDisplay();
 
-                // Close the popup
+                
                 closePopup();
             }
         }
 
         function removeFromCart(index) {
-            // Remove the item from the cart
+            
             const removedItem = cart.splice(index, 1)[0];
 
             

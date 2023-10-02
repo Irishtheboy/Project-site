@@ -3,50 +3,68 @@
 <head>
     <style>
         .dropdown {
-          position: relative;
-          display: inline-block;
+            position: relative;
+            display: inline-block;
         }
         
         .dropdown-content {
-        display: none;
-        position: fixed; /* Change position to fixed */
-        background-color: #020202;
-        top: 0; /* Align to the top of the viewport */
-        right: 0; /* Align to the right side */
-        bottom: 0; /* Align to the bottom of the viewport */
-        width: 160px; /* Set a fixed width */
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        padding: 12px 16px;
-        z-index: 1;
-    }
-    
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-        
-        .dropdown:hover img {
-          content: url('images/Elements/burgermenuT.png' );
-          width: 40px;
-          position: relative;
+    display: none;
+    position: absolute;
+    background-color: #020202;
+    top: 100%; 
+    right: 0;
+    width: 170px;
+    height: 90vh; 
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    overflow-y: auto;
+    padding: 16px;
+}    
+        .dropdown button {
+            cursor: pointer;
+        }
+        .dropdown-content ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            text-decoration: none;
         }
 
-        #toggle-button {
-    cursor: pointer;
-}
+        .dropdown-content ul li {
+            padding-top: 10px 0; 
+            text-decoration: none;
+            color: #fff; 
+            margin-bottom: 10px;
+        }
 
-#close-button {
-    cursor: pointer;
-    position: absolute;
-    top: 5px;
-    right: 10px;
-    font-size: 24px;
-}
+        .dropdown-content ul li a {
+            text-decoration: none;
+            color: #fff; 
+        }
 
-#close-button:hover {
-    color: red; /* Change the close button color on hover */
-}
-        </style>
+        
+        .dropdown #close-button {
+            cursor: pointer;
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            font-size: 24px;
+            color: #fff; 
+        }
+
+        .dropdown #close-button:hover {
+            color: red; 
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .btn1{
+            border: none;
+            background: none;
+            cursor: pointer;
+            overflow: hidden;}
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/indexM.css">
@@ -60,13 +78,15 @@
             <img src="images/Elements/logo3.png" alt="Logo 3">
         </div>
         <div class="logo">
-            <img src="images/Elements/MainLogo.png" alt="Main Image" width="100px">
+            <img src="images/Elements/MainLogo.png" alt="Main Image" >
         </div>
         <div class="dropdown">
-            <span id="toggle-button"><img src="images/Elements/burgermenu.png" alt="Logo 1" width="40px"></span>
+           
+            <button id="toggle-button" class="btn1"><img src="images/Elements/burgermenu.png" alt="Logo 1" width="40px"></button>
             <div class="dropdown-content">
-                <span id="close-button">&times;</span> <!-- Close (X) button -->
+                <span id="close-button" onclick="closeDropdown()">&times;</span> 
                 <ul>
+                   
                     <li><a href="index.html">Home</a></li>
                     <li><a href="Home#">About the Leather</a></li>
                     <li><a href="Home#">DIY Methods</a></li>
@@ -80,47 +100,11 @@
     <div class="MainImage">
         <img src="images/MainImage.jpeg" alt="Welcome Image" width="100%" height="100%">
         <div class="Hh1">
-            <h1>Inkweli Yenkosi</h1>
+            <img src="images/Elements/MainLogo.png" alt="Main Image" width="100px" height="20px">
         </div>
     </div>
 
-    <!--
-    <section class="product-section">
-        <h2>Shop Now!</h2>
-        <div class="product-container">
-           
-            <div class="product">
-                <img src="Images/Night - Drip 280.png" alt="Product 1">
-                <h3>Limited Edition</h3>
-                <p>Guidan Suite NightForm</p>
-                <p>Price: R200</p>
-            </div>
-           
-            <div class="product">
-                <img src="Images/5edeaf6cddea86227f88011739ffb71b.jpg" alt="Product 2">
-                <h3>Limited Edition</h3>
-                <p>Black Venom </p>
-                <p>Price: R250</p>
-            </div>
-          
-            <div class="product">
-                <img src="Images/Denji.jpeg" alt="Product 2">
-                <h3>Limited Edition</h3>
-                <p>SplinterCell white </p>
-                <p>Price: R800</p>
-            </div>
-           
-            <div class="product">
-                <img src="Images/R.jpeg" alt="Product 2">
-                <h3>Limited Edition</h3>
-                <p>Snake Green </p>
-                <p>Price: R950</p>
-            </div>
 
-        </div>
-    </section>
-
--->
 <footer class="footer">
     <div class="footer-content">
         <p>&copy; 2023 Inkweli Yenkosi</p>
@@ -131,6 +115,26 @@
         </ul>
     </div>
 </footer>
+
+
+<script>
+    function toggleDropdown() {
+        var dropdownContent = document.querySelector(".dropdown-content");
+        if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+        } else {
+            dropdownContent.style.display = "block";
+        }
+    }
+
+    function closeDropdown() {
+        var dropdownContent = document.querySelector(".dropdown-content");
+        dropdownContent.style.display = "none";
+    }
+
+    document.getElementById("toggle-button").addEventListener("click", toggleDropdown);
+</script>
 </body>
 </html>
+
 
