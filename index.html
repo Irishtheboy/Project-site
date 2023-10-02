@@ -1,44 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #020202;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          padding: 12px 16px;
+          z-index: 1;
+          right: 0;
+        }
+        
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+
+        
+        .dropdown:hover img {
+          content: url('images/Elements/burgermenuT.png' );
+          width: 40px;
+          position: relative;
+        }
+        </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/index.css">
     <title>IndexPage</title>
 </head>
 <body>
-    <div class="container">
-        <nav class="navbar">
-            <div class="left-images">
-                <img src="images/Elements/logo1.png" alt="Logo 1">
-                <img src="images/Elements/logo2.png" alt="Logo 2">
-                <img src="images/Elements/logo3.png" alt="Logo 3">
-            </div>
-            <div class="logo">
-                <img src="images/Elements/MainLogo.png" alt="Main Image" width="100px">
-            </div>
-            <div class="dropdown">
-                <span><img src="images/Elements/burgermenu.png" alt="Logo 1" width="40px"></span>
-                <div class="dropdown-content">
-                    <ul>
-                        <li><a href="Home#">Home</a></li>
-                        <li><a href="Home#">About the Leather</a></li>
-                        <li><a href="Home#">DIY Methods</a></li>
-                        <li><a href="Home#">Brick & Mortar</a></li>
-                        <li><a href="ShopNow.html">Shop Now</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <div class="MainImage">
-            <img src="images/MainImage.jpeg" alt="Welcome Image" width="100%" height="100%">
-            <div class="Hh1">
-                <h1>Inkweli Yenkosi</h1>
-            </div>
+    <nav class="navbar">
+        <div class="left-images">
+            <img src="images/Elements/logo1.png" alt="Logo 1">
+            <img src="images/Elements/logo2.png" alt="Logo 2">
+            <img src="images/Elements/logo3.png" alt="Logo 3">
         </div>
+        <div class="logo">
+            <img src="images/Elements/MainLogo.png" alt="Main Image" width="100px">
+        </div>
+        <div class="dropdown">
+            <span><img src="images/Elements/burgermenu.png" alt="Logo 1" width="40px"></span>
+            <div class="dropdown-content">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Home#">About the Leather</a></li>
+                <li><a href="Home#">DIY Methouds</a></li>
+                <li><a href="Home#">Brick & Morter</a></li>
+                <li><a href="ShopNow.html">Shop Now</a></li>
+              </ul>
+            </div>
+          </div>
+    </nav>
 
-   
+    <div class="MainImage">
+        <img src="images/MainImage.jpeg" alt="Welcome Image" width="100%" height="100%">
+        <div class="Hh1">
+            <h1>Inkweli Yenkosi</h1>
+        </div>
+    </div>
+
+    <!--
+    <section class="product-section">
+        <h2>Shop Now!</h2>
+        <div class="product-container">
+           
+            <div class="product">
+                <img src="Images/Night - Drip 280.png" alt="Product 1">
+                <h3>Limited Edition</h3>
+                <p>Guidan Suite NightForm</p>
+                <p>Price: R200</p>
+            </div>
+           
+            <div class="product">
+                <img src="Images/5edeaf6cddea86227f88011739ffb71b.jpg" alt="Product 2">
+                <h3>Limited Edition</h3>
+                <p>Black Venom </p>
+                <p>Price: R250</p>
+            </div>
+          
+            <div class="product">
+                <img src="Images/Denji.jpeg" alt="Product 2">
+                <h3>Limited Edition</h3>
+                <p>SplinterCell white </p>
+                <p>Price: R800</p>
+            </div>
+           
+            <div class="product">
+                <img src="Images/R.jpeg" alt="Product 2">
+                <h3>Limited Edition</h3>
+                <p>Snake Green </p>
+                <p>Price: R950</p>
+            </div>
+
+        </div>
+    </section>
+
+-->
 <footer class="footer">
     <div class="footer-content">
         <p>&copy; 2023 Inkweli Yenkosi</p>
