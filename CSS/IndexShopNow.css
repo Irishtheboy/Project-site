@@ -1,0 +1,258 @@
+/* Reset default browser styles */
+body, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Base styles for the body and fonts */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column; 
+}
+
+/* Navigation bar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #020202;
+    color: white;
+    padding: 10px;
+}
+
+.left-images img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo img {
+    max-width: 100px;
+}
+
+/* Dropdown menu styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #020202;
+    top: 100%;
+    right: -10px;
+    width: 250px;
+    height: 90vh;
+    box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    z-index: 1;
+    overflow-y: auto;
+}
+
+.dropdown button {
+    cursor: pointer;
+}
+
+.dropdown-content ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.dropdown-content ul li {
+    padding: 10px 0;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.dropdown-content ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.dropdown #close-button {
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 24px;
+    color: #fff;
+}
+
+.dropdown #close-button:hover {
+    color: red;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Main content container styles */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 10px;
+    flex-grow: 1; 
+}
+
+/* Product styles */
+.product {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    max-width: 230px;
+    width: 100%;
+    height: 10%;
+}
+
+.cart {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    background-color: #fff; 
+    border-radius: 8px; 
+    margin: 0 auto; 
+    text-align: left; 
+}
+
+.cart h2 {
+    font-size: 24px; 
+    margin-bottom: 10px; 
+}
+
+#cartItems {
+    list-style-type: none; 
+    padding: 0;
+}
+
+#cartTotal {
+    font-weight: bold; 
+    font-size: 18px; 
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Popup styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative; /* Center content */
+}
+
+.product .p9 {
+    font-size: x-small;
+
+}
+.btnCart {
+    border: none;
+    background: none;
+    padding: 10px 20px;
+    font-family: "montserrat";
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+}
+
+.btnCart:hover {
+    color: #fff;
+}
+
+.btn1 {
+    border: none;
+    background: none;
+    cursor: pointer;
+    overflow: hidden;
+}
+.btnCheck {
+    background-color: #000000;
+    color: white;
+    position: relative;
+    left: 35%;
+}
+.btnCart::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #3498db;
+    z-index: -1;
+    transition: 0.8s;
+}
+
+/* Footer content styles */
+
+
+.footer {
+    background-color: #000000;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
