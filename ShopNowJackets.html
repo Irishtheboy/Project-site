@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jackets</title>
+    <link rel="stylesheet" href="CSS/IndexShopNow.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="left-images">
+            <img src="images/Elements/logo1.png" alt="Logo 1">
+            <img src="images/Elements/logo2.png" alt="Logo 2">
+            <img src="images/Elements/logo3.png" alt="Logo 3">
+        </div>
+        <div class="logo">
+            <img src="images/Elements/MainLogo.png" alt="Main Image" >
+        </div>
+        <div class="dropdown">
+           
+            <button id="toggle-button" class="btn1"><img src="images/Elements/burgermenu.png" alt="Logo 1" width="40px"></button>
+            <div class="dropdown-content">
+                <span id="close-button" onclick="closeDropdown()">&times;</span> 
+                <ul>
+                   
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Home#">About the Leather</a></li>
+                    <li><a href="DIY Method.html">DIY Methods</a></li>
+                    <li><a href="Home#">Brick & Mortar</a></li>
+                    <li class="shop-now-dropdown">
+                        <a href="ShopAllNow.html">Shop Now</a>
+                        <div class="shop-now-submenu">
+                            <ul>
+                                <li><a href="ShopNowAccessories.html">Accessories</a></li>
+                                <li><a href="ShopNowBags.html">Bags</a></li>
+                                <li><a href="ShopNowJackets.html">Jackets</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <h1 style="left: 50%; position: relative;">Jackets</h1>
+    
+    <section>
+    <div class="container">
+        <!-- Product list -->
+     <!-------------JACKETS----------------------- JACKETS --------------------JACKETS------------------->	
+
+	<div class="product">
+			<img src="images/Jacket/jacket1.jpg" alt="Black Men's Jacket">
+			<h2>Black Leather Men's Jacket</h2>
+			<p>Price: R1000.00</p>
+			<button class="btnCart" onclick="openPopup('Black Leather Men\'s Wallet', 10)"><img src="images/R.png" alt="Logo 1" width="40px"></button>
+		</div>
+	
+	<div class="product">
+			<img src="images/Jacket/jacket2.jpg" alt="Brown Men's Jacket">
+			<h2>Brown Leather Men's Jacket</h2>
+			<p>Price: R1000.00</p>
+			<button class="btnCart" onclick="openPopup('Black Leather Men\'s Wallet', 10)"><img src="images/R.png" alt="Logo 1" width="40px"></button>
+		</div>	
+	
+	<div class="product">
+			<img src="images/Jacket/jacket3.jpg" alt="Black Men's Jacket">
+			<h2>Black Leather Men's Jacket</h2>
+			<p>Price: R1000.00</p>
+			<button class="btnCart" onclick="openPopup('Black Leather Men\'s Wallet', 10)"><img src="images/R.png" alt="Logo 1" width="40px"></button>
+		</div>	
+		
+	<div class="product">
+			<img src="images/Jacket/jacket4.jpg" alt="Tobacco Men's Jacket">
+			<h2>Tobacco Leather Men's Jacket</h2>
+			<p>Price: R1000.00</p>
+			<button class="btnCart" onclick="openPopup('Black Leather Men\'s Wallet', 10)"><img src="images/R.png" alt="Logo 1" width="40px"></button>
+		</div>	
+
+	<div class="product">
+			<img src="images/Jacket/wjacket1.jpg" alt="Black womens Jacket">
+			<h2>Black Leather Women's Jacket</h2>
+			<p>Price: R1000.00</p>
+			<button class="btnCart" onclick="openPopup('Black Leather Men\'s Wallet', 10)"><img src="images/R.png" alt="Logo 1" width="40px"></button>
+		</div>
+	<div class="product">
+			<img src="images/Jacket/wjacket2.jpg" alt="brown women's Jacket">
+			<h2>Brown Leather Women's Jacket</h2>
+			<p>Price: R1000.00</p>
+			<button class="btnCart" onclick="openPopup('Black Leather Men\'s Wallet', 10)"><img src="images/R.png" alt="Logo 1" width="40px"></button>
+		</div>
+
+	<div class="product">
+			<img src="images/Jacket/wjacket4.jpg" alt="Black womens Jacket">
+			<h2>Black Leather Women's Jacket</h2>
+			<p>Price: R1000.00</p>
+			<button class="btnCart" onclick="openPopup('Black Leather Men\'s Wallet', 10)"><img src="images/R.png" alt="Logo 1" width="40px"></button>
+		</div>
+	<div class="product">
+			<img src="images/Jacket/wjacket3.jpg" alt="Silver womens Jacket">
+			<h2>Silver Leather Women's Jacket</h2>
+			<p>Price: R1000.00</p>
+			<button class="btnCart" onclick="openPopup('Black Leather Men\'s Wallet', 10)"><img src="images/R.png" alt="Logo 1" width="40px"></button>
+		</div> 
+		
+    </section>
+
+
+        <!-- Shopping cart -->
+        <div class="cart">
+            <h2 style="text-align: center;">Shopping Cart</h2>
+            <ul id="cartItems" style="text-align: center;"></ul>
+            <p style="text-align: center;">Total: R<span id="cartTotal">0.00</span></p>
+            <!-- check Out button remember that-->
+            <a href="https://www.youtube.com" class="btnCheck">
+                <button style="background-color: #000000; color: white;">Check Out</button>
+            </a>
+
+        </div>
+    </div>
+
+    <!-- Popup for selecting quantity -->
+    <div class="popup" id="quantityPopup">
+        <div class="popup-content">
+            <h2>Select Quantity</h2>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" min="1" value="1">
+            <button onclick="addToCartWithQuantity()">Add to Cart</button>
+            <button onclick="closePopup()">Cancel</button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/dropdown.js"></script>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2023 Inkweli Yenkosi</p>
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </footer>
+        </body>
+</body>
+</html>
