@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  
+  .container {
+    width: 500px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  form {
+    margin-top: 20px;
+  }
+  
+  .billing-details,
+  .shipping-details {
+    margin-bottom: 20px;
+  }
+  
+  .terms-of-service {
+    margin-bottom: 10px;
+  }
+  
+  .submit-button {
+    text-align: center;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+  }
+  
+  /* Add some styling
