@@ -114,7 +114,7 @@
             <ul id="cartItems" style="text-align: center;"></ul>
             <p style="text-align: center;">Total: R<span id="cartTotal">0.00</span></p>
             <!-- check Out button remember that-->
-            <a href="https://www.youtube.com" class="btnCheck">
+            <a href="Checkout.html" class="btnCheck">
                 <button style="background-color: #000000; color: white;">Check Out</button>
             </a>
 
@@ -129,11 +129,19 @@
             <input type="number" id="quantity" min="1" value="1">
             <button onclick="addToCartWithQuantity()">Add to Cart</button>
             <button onclick="closePopup()">Cancel</button>
+            <button>
+				<a href="Checkout.html" style="text-decoration: none; color: white;">Check Out</a>
+			</button>
+            <span id="totalAmountDisplay"></span>
         </div>
     </div>
 
     <script src="js/main.js"></script>
     <script src="js/dropdown.js"></script>
+
+    <div class="last-content-element">
+        <p></p>
+     </div>
 
         <footer class="footer">
             <div class="footer-content">

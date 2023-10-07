@@ -19,6 +19,11 @@ function addToCartWithQuantity() {
         updateCartDisplay();
         total += totalPrice;
         updateTotalDisplay();
+        
+        // Update the total amount display in the popup
+        const totalAmountDisplay = document.getElementById("totalAmountDisplay");
+        totalAmountDisplay.textContent = "Total: R" + total.toFixed(2);
+        
         closePopup();
     }
 }

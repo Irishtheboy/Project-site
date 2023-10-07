@@ -162,6 +162,9 @@ a:active {
 .footer-links a:hover {
     text-decoration: underline;
 }
+.last-content-element {
+    margin-bottom: 100px; /* Adjust the value as needed */
+}
 
 .dropdown {
     position: relative;
