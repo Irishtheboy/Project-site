@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/AboutLeatherStyle.css"> 
+    <title>About The Leather</title>
+
+    <style>
+                body {
+            margin: 0;
+            padding: 0;
+            overflow-y: scroll;
+            background-image: url('images/blackdicedPic.jpg'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100%;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+    </style>
+    <script>
+        function toggleSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            section.classList.toggle("expanded");
+            section.classList.toggle("collapsed");
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="left-images">
+            <img src="images/Elements/logo1.png" alt="Logo 1">
+            <img src="images/Elements/logo2.png" alt="Logo 2">
+            <img src="images/Elements/logo3.png" alt="Logo 3">
+        </div>
+        <div class="logo">
+            <img src="images/Elements/MainLogo.png" alt="Main Image">
+        </div>
+        <div class="dropdown">
+            <button id="toggle-button" class="btn1"><img src="images/Elements/burgermenu.png" alt="Logo 1" width="40px"></button>
+            <div class="dropdown-content">
+                <span id="close-button" onclick="closeDropdown()">&times;</span>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#About-the-Leather">About the Leather</a></li>
+                    <li><a href="DIY Method.html">DIY Methods</a></li>
+                    <li><a href="#Brick-&-Mortar">Brick & Mortar</a></li>
+                    <li class="shop-now-dropdown">
+                        <a href="ShopAllNow.html">Shop Now</a>
+                        <div class="shop-now-submenu">
+                            <ul>
+                                <li><a href="ShopNowAccessories.html">Accessories</a></li>
+                                <li><a href="ShopNowBags.html">Bags</a></li>
+                                <li><a href="ShopNowJackets.html">Jackets</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <div class="section-content expanded" id="About-the-Leather">
+            <p>At Nkwali Yenkosi, we believe that leather is more than just a material; it's a timeless expression of style, durability, and craftsmanship. Our journey into the world of leather began with a simple idea: to create leather products that blend tradition and innovation, resulting in items that not only look exceptional but also stand the test of time. For years, we've been dedicated to perfecting the art of leatherworking, and today, we are proud to offer a collection of leather clothing and accessories that reflect our passion for quality and design. Each piece in our range embodies the rich heritage of leather craftsmanship, and we invite you to explore our world of leather excellence.</p>
+            <div class="image-container">
+                <img src="images/GreynWhite.png" alt="Image 1">
+                <img src="images/shinnyblack.jpg" alt="Image 2">
+            </div>
+        </div>
+    </section>
+
+    <section id="Types-of-Leather" class="section-content">
+        <div class="grid-column">
+            <p>At Nkwali Yenkosi, we understand that not all leather is created equal. That's why we offer a diverse selection of leather types, each with its unique qualities and characteristics. Our commitment to quality means that you can expect the finest leather materials in our products.</p>
+            <p>Explore our range, which includes:</p>
+        </div>
+        <h2>Types of Leather</h2>
+        <ul class="leather-types">
+            <li>
+                <strong>Full-Grain Leather:</strong>
+                <p>Known for its natural grain and durability, full-grain leather ages beautifully over time.</p>
+                <img src="images/AboutLeather3.jpeg" alt="Full-Grain Leather">
+            </li>
+            <li>
+                <strong>Top-Grain Leather:</strong>
+                <p>Slightly refined, top-grain leather maintains a smooth surface while retaining strength.</p>
+                <img src="images/crackingGreynWhit.jpg" alt="Top-Grain Leather">
+            </li>
+            <li>
+                <strong>Suede:</strong>
+                <p>Soft and velvety, suede leather adds a touch of luxury to our collection.</p>
+                <img src="images/AboutLeatherPic.jpeg" alt="Suede Leather">
+            </li>
+            <li>
+                <strong>Specialty Leathers:</strong>
+                <p>Discover unique and specialty leathers that bring distinctive character to our products.</p>
+                <img src="images/blackdicedPic.jpg" alt="Specialty Leathers">
+            </li>
+        </ul>
+        <p>Each type of leather we use undergoes rigorous quality checks to ensure that it meets our high standards. Whether you're looking for a classic leather jacket, a stylish handbag, or any of our other leather creations, you can trust that Nkwali Yenkosi offers the best in leather excellence.</p>
+    </section>
+
+    <section id="Sourcing" class="section-content">
+        <div>
+            <p>Our commitment to quality begins with the careful selection of the finest leather materials. We source our leather from trusted suppliers who share our dedication to ethical and sustainable practices. Our leather is responsibly obtained, ensuring that we support environmentally friendly and socially responsible processes. By prioritizing responsible sourcing, we can offer our customers not only exceptional quality but also the peace of mind that comes from knowing the origins of our materials.</p>
+            <div class="image-container">
+                <img src="images/AboutLeatherPic3.jpeg" alt="Image 1">
+                <img src="images/AboutleatherPic2.jpeg" alt="Image 2">
+            </div>
+        </div>
+    </section>
+
+    <section id="Quality-assurance" class="section-content">
+        <div>
+            <p>Quality is the cornerstone of Nkwali Yenkosi. Our leather undergoes a stringent quality control process to guarantee that only the highest-grade materials make their way into our products. Our skilled artisans meticulously inspect and assess each piece of leather to ensure it meets our exacting standards. In addition to our internal quality checks, we adhere to industry certifications and standards, providing you with the assurance that our products are crafted with precision and care.</p>
+            <img src="images/blackdicedPic.jpg" alt="Image 1">
+        </div>
+    </section>
+
+    <section id="Tanning-process" class="section-content">
+        <div>
+            <p>Our leather owes its exceptional characteristics to the meticulous tanning process we employ. We utilize a combination of traditional craftsmanship and modern techniques to create leather that is both supple and enduring. Depending on the desired outcome, we may use various tanning methods, such as vegetable tanning or chrome tanning. Throughout the process, we remain conscious of environmental considerations, seeking to minimize our ecological footprint. Our dedication to sustainable tanning ensures that our leather not only looks and feels great but also aligns with our commitment to the planet.</p>
+            <img src="images/blackdicedPic.jpg" alt="Image 1">
+        </div>
+    </section>
+
+    <section id="Durability" class="section-content">
+        <div>
+            <p>One of the defining features of leather is its remarkable durability. At Nkwali Yenkosi, we take pride in crafting leather products that are built to last. Leather's inherent strength and resilience make it an ideal choice for those seeking long-lasting accessories and clothing. We've heard countless stories from satisfied customers who have enjoyed their Nkwali Yenkosi leather items for years, with each piece aging gracefully and developing a unique character over time. When you invest in our leather products, you're investing in quality that endures.</p>
+            <img src="images/brownleathertex.jpg" alt="Image 1">
+        </div>
+    </section>
+
+    <section id="Craftsmanship" class="section-content">
+        <div>
+            <p>Our dedication to craftsmanship is at the heart of every Nkwali Yenkosi creation. Our skilled artisans bring years of experience and a passion for their craft to every piece they produce. From the precise cutting of leather to the meticulous stitching and finishing touches, our artisans ensure that each product meets our exacting standards. Their commitment to detail, coupled with their dedication to preserving time-honored leatherworking techniques, results in leather items that are both functional and exquisite. Experience the artistry of Nkwali Yenkosi craftsmanship in every product we offer.</p>
+            <img src="images/bowngreyfolded.jpg" alt="Image 1">
+        </div>
+    </section>
+
+    <hr>
+
+    <div class="last-content-element">
+        <p></p>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2023 Inkweli Yenkosi</p>
+            <ul class="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

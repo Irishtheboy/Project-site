@@ -1,0 +1,272 @@
+/* Reset default margin and padding */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation bar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #020202;
+    color: white;
+    padding: 10px;
+}
+
+.left-images img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo img {
+    max-width: 100px;
+}
+
+/* Dropdown menu styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #020202;
+    top: 100%;
+    right: -10px;
+    width: 250px;
+    height: 90vh;
+    box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    z-index: 1;
+    overflow-y: auto;
+}
+
+.dropdown button {
+    cursor: pointer;
+}
+
+.dropdown-content ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.dropdown-content ul li {
+    padding: 10px 0;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.dropdown-content ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.dropdown #close-button {
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 24px;
+    color: #fff;
+}
+
+.dropdown #close-button:hover {
+    color: red;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Add this CSS rule to initially hide the submenu */
+.shop-now-submenu {
+    display: none;
+    position: absolute;
+    top: 28%;
+    left: -0%;
+    background-color: #630202;
+    width: 250px;
+    box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    z-index: 5;
+}
+
+/* Add this CSS rule to show the submenu when hovering over the "Shop Now" link */
+.shop-now-dropdown:hover .shop-now-submenu {
+    display: block;
+}
+
+.btn1 {
+    border: none;
+    background: none;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+h2 {
+    color: aliceblue;
+}
+
+p {
+    color: aliceblue;
+}
+
+/* Main background image for the body */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    background-image: url('/images/BG.jpeg'); /* Adjust the path to your image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Section styles */
+.section-content {
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    color: #ffffff;
+    max-height: 400px;
+    transition: max-height 0.3s ease-in-out;
+}
+
+/* Additional styles for section collapsing/expanding */
+.section-content {
+    overflow-y: scroll; /* Add this line to allow scrolling within expanded sections */
+    width: 50%;
+    left: 30%;
+}
+
+.section-content.collapsed {
+    height: 0;
+    display: block;
+}
+
+.section-content.expanded {
+    height: auto;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.section-content.collapsed .toggle-button::after {
+    content: '+';
+}
+
+.section-content.expanded .toggle-button::after {
+    content: '-';
+}
+
+.toggle-button:hover {
+    background-color: #76797b;
+}
+
+.toggle-button {
+    background-color: #080808;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+/* Styles for the "About the Leather" section */
+.AboutLeatherpic {
+    width: 200px;
+    height: 200px;
+}
+
+/* Footer styles */
+.footer {
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    background-color: black;
+}
+
+/* Styles for the image container */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+    margin: 0 20px;
+}
+
+.image-container img:not(:last-child) {
+    margin-right: 40px;
+}
+
+/* Footer content styles */
+.footer {
+    background-color: #000000;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* CSS for centering the "toggle section" buttons */
+.button-container {
+    padding-left: 50%;
+    
+    margin-top: 10px; /* Add margin for spacing */
+}

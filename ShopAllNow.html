@@ -235,21 +235,24 @@
         </div>
     </div>
 
-    <!-- Popup for selecting quantity -->
-    <div class="popup" id="quantityPopup">
-        <div class="popup-content">
-            <h2>Select Quantity</h2>
-            <label for="quantity">Quantity:</label>
-            <input type="number" id="quantity" min="1" value="1">
-            <button onclick="addToCartWithQuantity()">Add to Cart</button>
-            <button onclick="closePopup()">Cancel</button>
-            <button>
-				<a href="Checkout.html" style="text-decoration: none; color: white;">Check Out</a>
-			</button>
-            <span id="totalAmountDisplay"></span>
+	
+<!-- Popup for selecting quantity -->
+<div class="popup" id="quantityPopup">
+    <div class="popup-content">
+        <h2>Select Quantity</h2>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" min="1" value="1">
+        <button onclick="addToCartWithQuantity()">Add to Cart</button>
+        <button onclick="closePopup()">Cancel</button>
+        <span id="totalAmountDisplay"></span>
+        <div id="selectedItems">
+            <!-- Previously selected items will be displayed here -->
         </div>
+        <button>
+            <a href="Checkout.html" style="text-decoration: none; color: white;">Check Out</a>
+        </button>
     </div>
-
+</div>
     <script src="js/main.js"></script>
     <script src="js/dropdown.js"></script>
 

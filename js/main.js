@@ -8,6 +8,7 @@ function openPopup(productName, productPrice) {
     currentProductName = productName;
     currentProductPrice = productPrice;
     document.getElementById("quantityPopup").style.display = "flex";
+    updateSelectedItems();
 }
 
 function addToCartWithQuantity() {
@@ -19,20 +20,17 @@ function addToCartWithQuantity() {
         updateCartDisplay();
         total += totalPrice;
         updateTotalDisplay();
-        
-        // Update the total amount display in the popup
-        const totalAmountDisplay = document.getElementById("totalAmountDisplay");
-        totalAmountDisplay.textContent = "Total: R" + total.toFixed(2);
-        
+        updateSelectedItems();
         closePopup();
     }
 }
 
 function removeFromCart(index) {
     const removedItem = cart.splice(index, 1)[0];
-    updateCartDisplay();
     total -= removedItem.price;
     updateTotalDisplay();
+    updateSelectedItems();
+    updateCartDisplay();
 }
 
 function updateCartDisplay() {
@@ -57,6 +55,24 @@ function updateTotalDisplay() {
     cartTotal.textContent = total.toFixed(2);
 }
 
+function updateSelectedItems() {
+    const selectedItemsContainer = document.getElementById("selectedItems");
+    selectedItemsContainer.innerHTML = "";
+
+    for (let i = 0; i < cart.length; i++) {
+        const selectedItem = document.createElement("div");
+        selectedItem.textContent = cart[i].name + " - R" + cart[i].price.toFixed(2);
+        const removeButton = document.createElement("button");
+        removeButton.textContent = "Remove";
+        removeButton.onclick = function () {
+            removeFromCart(i);
+        };
+        selectedItem.appendChild(removeButton);
+        selectedItemsContainer.appendChild(selectedItem);
+    }
+}
+
 function closePopup() {
     document.getElementById("quantityPopup").style.display = "none";
 }
+
