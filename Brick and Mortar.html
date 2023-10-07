@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+	body {
+		background-image: url("images/B and M/Background.jpg");
+		background-repeat: repeat;
+		background-attachment: fixed;  
+		background-size: 500px;
+		}
+
+	</style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="CSS/BAM.css">
+  <link rel="stylesheet" href="CSS/IndexShopNow.css">
+	</head>
+	<body>
+    
+      <nav class="navbar">
+        <div class="left-images">
+          <img src="images/Elements/logo1.png" alt="Logo 1">
+          <img src="images/Elements/logo2.png" alt="Logo 2">
+          <img src="images/Elements/logo3.png" alt="Logo 3">
+        </div>
+        <div class="logo">
+          <img src="images/Elements/MainLogo.png" alt="Main Image" >
+        </div>
+        <div class="dropdown">
+           
+          <button id="toggle-button" class="btn1"><img src="images/Elements/burgermenu.png" alt="Logo 1" width="40px"></button>
+          <div class="dropdown-content">
+            <span id="close-button" onclick="closeDropdown()">&times;</span> 
+            <ul>
+               
+              <li><a href="index.html">Home</a></li>
+              <li><a href="AboutTheLeather.html">About the Leather</a></li>
+              <li><a href="DIY Method.html">DIY Methods</a></li>
+              <li><a href="Brick and Mortar.html">Brick & Mortar</a></li>
+              <li class="shop-now-dropdown">
+                <a href="ShopAllNow.html">Shop Now</a>
+                <div class="shop-now-submenu">
+                  <ul>
+                    <li><a href="ShopNowAccessories.html">Accessories</a></li>
+                    <li><a href="ShopNowBags.html">Bags</a></li>
+                    <li><a href="ShopNowJackets.html">Jackets</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+	<div style="text-align:center">
+	<h1><mark style="color:black;background-color:rgba(250, 250, 250, 0.681);border-style: solid">Brick & Mortar</mark></h1>
+	<p><mark style="color:black;background-color:rgba(250, 250, 250, 0.681);border-style: solid">Click the boxes to find out more.</mark></p>
+	</div>
+
+<!-- Three columns -->
+<div class="row">
+  <div class="column" onclick="openTab('b1');" style="background:rgba(250, 250, 250, 0.681);border-style: solid">
+    <div style="color:black">Location</div>
+  </div>
+  <div class="column" onclick="openTab('b2');" style="background:rgba(250, 250, 250, 0.681);border-style: solid">
+	<div style="color:black">Services</div>
+  </div>
+  <div class="column" onclick="openTab('b3');" style="background:rgba(250, 250, 250, 0.681);border-style: solid">
+	<div style="color:black">Contact Us</div>
+  </div>
+</div>
+
+<!-- Full-width columns: (hidden by default) -->
+<div id="b1" class="containerTab" style="display:none;background:rgba(250, 250, 250, 0.681);border-style: solid;color:black">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn2" style="color:black">&times;</span>
+    <h2 style="color:black">How do we find you?</h2>
+	<h4 style="color:black">A: The building's address is displayed below.</h4>
+	  <p style="text-align:center"><img class="percent-30 float-right"  src="images/B and M/Location.avif"></p>
+	<h2 style="color:black">Physical Address</h2>
+	<p style="color:black">Street Number: 50, Union Avenue</p>
+	<p style="color:black">Suburb/City: Pinelands, Cape Town</p>
+	<p style="color:black">State/Region: Western Cape</p>
+	<p style="color:black">Postcode: 7405</p>
+	<p style="color:black">Country: South Africa</p>
+
+		<hr style="height:15px;border-width:0;background-color:rgba(0, 0, 0, 0)">
+		<hr style="height:15px;border-width:0;background-color:rgba(0, 0, 0, 0)">
+		<hr style="height:15px;border-width:0;background-color:rgba(0, 0, 0, 0)">
+		<hr style="height:15px;border-width:0;background-color:rgba(0, 0, 0, 0)">
+		<hr style="height:15px;border-width:0;background-color:rgba(0, 0, 0, 0)">
+</div>
+
+<div id="b2" class="containerTab" style="display:none;background:rgba(250, 250, 250, 0.681);border-style: solid;color:black">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn2" style="color:black">&times;</span>
+  <h2 style="color:black">What kind of Services do you provide?</h2>
+    <h4 style="color:black">A: We provide customers to purchase a variety of apparel of their choosing. 
+	Our employees will be able to assist them if they need a different size or if there is different color. 
+	You as a customer will also have the chance to request what kind of design you would like to have on your apparel for a honest and fair price.</h4>
+ <div class="row2">
+  <div class="column2">
+    <img src="images/B and M/Service1.avif" width = "125.3%;" height = "7%;">
+  </div>
+  <div class="column2">
+    <img src="images/B and M/Service2.jpg" width = "125%;" height = "7%;">
+  </div>
+  <div class="column2">
+    <img src="images/B and M/Service3.jpg" width = "125%;" height = "7%;">
+  </div>
+  <div class="column2">
+    <img src="images/B and M/Service4.jpg" width = "133.5%;" height = "30%;">
+  </div>
+</div>
+		<hr style="height:15px;border-width:0;background-color:rgba(0, 0, 0, 0)">
+		<hr style="height:15px;border-width:0;background-color:rgba(0, 0, 0, 0)">
+		<hr style="height:15px;border-width:0;background-color:rgba(0, 0, 0, 0)">
+		<hr style="height:15px;border-width:0;background-color:rgba(0, 0, 0, 0)">
+		<hr style="height:15px;border-width:0;background-color:rgba(0, 0, 0, 0)">
+</div>
+
+<div id="b3" class="containerTab" style="display:none;background:rgba(250, 250, 250, 0.681);border-style: solid;color:black">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn2" style="color:black">&times;</span>
+  <h2 style="color:black">How do we contact you?</h2>
+    <h4 style="color:black">A: Our contact information is displayed below.</h4>
+    <div class="row2">
+  <div class="column1">
+    <p style="text-align:center"><img src="images/B and M/Contact1.webp" width = "67%;"><h3 style="text-align:center;color:black">Customer</h3></p>
+	  <h2 style="color:black">Contact Information</h2>
+  <p style="color:black">Telephone No: +27 83 198 0062</p>
+  <p style="color:black">Telephone Alt No: +27 83 919 1703</p>
+  </div>
+  <div class="column1">
+    <p style="text-align:center"><img src="images/B and M/Contact2.jpg" width = "67%"><h3 style="text-align:center;color:black">Worker</h3></p>
+	<h2 style="color:black">Social Media</h2>
+  <p style="color:black">Facebook: @INKWALIYENKOSI_OFFICIAL</p>
+  <p style="color:black">Twitter or X: @INKWALIYENKOSI_OFFICIAL</p>
+  <p style="color:black">Youtube: @INKWALIYENKOSI_OFFICIAL</p>
+  <p style="color:black">Instagram: @INKWALIYENKOSI_OFFICIAL</p>
+  </div>
+
+  
+  </div>
+  		<hr style="height:15px;border-width:0;background-color:rgba(0, 0, 0, 0)">
+		<hr style="height:15px;border-width:0;background-color:rgba(0, 0, 0, 0)">
+		<hr style="height:15px;border-width:0;background-color:rgba(0, 0, 0, 0)">
+		<hr style="height:15px;border-width:0;background-color:rgba(0, 0, 0, 0)">
+		<hr style="height:15px;border-width:0;background-color:rgba(0, 0, 0, 0)">
+</div>
+
+
+<script>
+function openTab(tabName) {
+  var i, x;
+  x = document.getElementsByClassName("containerTab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(tabName).style.display = "block";
+}
+</script>
+<footer class="footer2">
+    <div class="footer-content">
+        <p>&copy; 2023 Inkweli Yenkosi</p>
+        <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </div>
+</footer>
+</body>
+</html>

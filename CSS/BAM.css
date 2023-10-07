@@ -1,0 +1,97 @@
+
+
+	* {
+		box-sizing: border-box;
+		}
+
+	/* The grid: Three equal columns that floats next to each other */
+	.column {
+		float: left;
+		width: 33.33%;
+		padding: 50px;
+		text-align: center;
+		font-size: 25px;
+		cursor: pointer;
+		}
+
+	.containerTab {
+		padding: 20px;
+		color: white;
+		}
+
+	/* Clear floats after the columns */
+	.row:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	/* Closable button inside the container tab */
+	.closebtn2 {
+		float: right;
+		color: white;
+		font-size: 35px;
+		cursor: pointer;
+		}
+
+	.column2 {
+		float: left;
+		width: 23.5%;
+		padding: 5px;
+		}
+
+	.column1 {
+		float: left;
+		width: 50%;
+		padding: 5px;
+		}
+
+	/* Clearfix (clear floats) */
+	.row2::after {
+		content: "";
+		clear: both;
+		display: table;
+		}
+
+	.footer2 {
+		background-color: rgba(0, 0, 0, 1);
+		color: white;
+		padding: 20px 0;
+		text-align: center;
+		position:fixed;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		}
+
+	.footer-content {
+		max-width: 1200px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		}
+
+	.footer p {
+		margin: 0;
+		}
+
+	.footer-links {
+		list-style: none;
+		padding: 0;
+		}
+
+	.footer-links li {
+		display: inline;
+		margin-right: 20px;
+		}
+
+	.footer-links a {
+		color: white;
+		text-decoration: none;
+		}
+
+	.footer-links a:hover {
+		text-decoration: underline;
+		}
